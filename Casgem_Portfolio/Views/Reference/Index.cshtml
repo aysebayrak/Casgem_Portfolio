@@ -1,0 +1,37 @@
+﻿@model List<Casgem_Portfolio.Models.Entities.TblReference>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_PortfolioAdminLayout.cshtml";
+
+    int count = 0;
+}
+
+<h2>Referaslarım</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Referans Adı</th>
+        <th>Referans Telefon</th>
+        <th>Referans Firma</th>
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <td>@count</td>
+            <td>@item.ReferenceName</td>
+            <td>@item.ReferenceProne</td>
+            
+
+            <td><a href="/Reference/DeleteReference/@item.ReferenceID" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/Reference/UpdateReference/@item.ReferenceID" class="btn btn-outline-dark">Güncelle</a></td>
+        </tr>
+    }
+</table>
+
+
+
+
+

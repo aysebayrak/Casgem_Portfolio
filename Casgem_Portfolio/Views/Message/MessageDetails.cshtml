@@ -1,0 +1,47 @@
+﻿@model Casgem_Portfolio.Models.Entities.TblMessage
+@{
+    ViewBag.Title = "MessageDetails";
+    Layout = "~/Views/Shared/_PortfolioAdminLayout.cshtml";
+}
+
+@*<h2>Mesaj Detayları</h2>
+
+Konu: @Html.DisplayFor(x => x.MessageSubject)
+<br />
+Gönderen: @Html.DisplayFor(x => x.NameSurname),
+<br />
+Mail Adresi: @Html.DisplayFor(x => x.SenderMail)
+<br />
+Mesaj: @Html.DisplayFor(x => x.Content)*@
+
+
+<form method="post">
+
+
+    <div class="form-floating mb-3">
+        <label for="floatingInputDisabled" class="text-warning">Konu</label>
+        <input class="form-control" placeholder=@Html.DisplayFor(x => x.MessageSubject, new { @class = "form-control" }) disabled>
+
+    </div>
+
+    <div class="form-floating mb-3">
+        <label for="floatingInputDisabled" class="text-warning">Gönderen</label>
+        <input class="form-control" placeholder=@Html.DisplayFor(x => x.NameSurname, new { @class = "form-control" }) disabled>
+
+
+    </div>
+
+    <div class="form-floating mb-3">
+        <label for="floatingInputDisabled" class="text-warning">Mail Adresi</label>
+        <input class="form-control" placeholder=@Html.DisplayFor(x => x.SenderMail, new { @class = "form-control" }) disabled>
+
+    </div>
+
+
+    <div class="form-floating mb-3">
+        <label for="floatingInputDisabled" class="text-warning">Mesaj</label>
+        <input class="form-control" placeholder=@Html.DisplayFor(x => x.Content, new { @class = "form-control" }) disabled>
+
+    </div>
+
+</form>

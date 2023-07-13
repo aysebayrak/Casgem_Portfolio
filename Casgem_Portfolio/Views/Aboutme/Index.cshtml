@@ -1,0 +1,29 @@
+﻿@model List<Casgem_Portfolio.Models.Entities.TblAboutme>
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_PortfolioAdminLayout.cshtml";
+}
+
+<h2 class="text-warning" >BEN KİMİM</h2>
+
+
+@foreach (var item in Model)
+{
+    <div class="py-5 w3l-resume">
+        <div class="container py-lg-5 py-3">
+            <h5 class="title-small mb-2  text-warning ">@item.AboutmeName</h5>
+            <br />
+            <br />
+            <br />
+            <h5 class="title-small mb-2">@item.AboutmeDetail</h5>
+
+           
+
+
+        </div>
+    </div>
+}
+
+
