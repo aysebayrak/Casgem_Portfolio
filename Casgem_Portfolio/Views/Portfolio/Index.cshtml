@@ -1,9 +1,10 @@
 ﻿
+
 @{
     Layout = null;
 }
 
-@*DENEME*@
+
 
 <!--
 Author: W3layouts
@@ -37,15 +38,15 @@ Author URL: http://w3layouts.com
     <!-- //testimonials -->
     <!-- home page video popup section -->
 
-    @Html.Action("PartialVideo")
+    @*@Html.Action("PartialVideo")*@
     <!-- //home page video popup section
     <!-- freelance hire me -->
     <section class="w3l-grid-quote text-center py-5">
         <div class="container py-3">
             <h6 class="title-small">İletişime Geçmek</h6>
             <h3 class="title-big mb-md-5 mb-4">Bir Proje Başlatalım mı.</h3>
-            <a href="contact.html" class="btn btn-style btn-primary mr-2">Beni işe al </a>
-            <a href="contact.html" class="btn btn-style btn-outline-primary">Temasta Olmak</a>
+            <a href="~/Templates/alexander-starter/contact.html" class="btn btn-style btn-primary mr-2">Beni işe al </a>
+            <a href="/Templates/alexander-starter/contact.html" class="btn btn-style btn-outline-primary">Temasta Olmak</a>
         </div>
     </section>
     <!-- //freelance hire me -->
@@ -104,7 +105,9 @@ Author URL: http://w3layouts.com
         const typedTextSpan = document.querySelector(".typed-text");
         const cursorSpan = document.querySelector(".cursor");
 
-        const textArray = ["UI/UX Designer", "Freelancer", "Web developer"];
+        
+
+        const textArray = ["Veri Bilimi", "Backend Developer"];
         const typingDelay = 200;
         const erasingDelay = 10;
         const newTextDelay = 100; // Delay between current and next text

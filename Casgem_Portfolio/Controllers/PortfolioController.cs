@@ -58,10 +58,13 @@ namespace Casgem_Portfolio.Controllers
 
         public PartialViewResult PartialVideo()
         {
-            ViewBag.videoTitle1 = db.TblAboutme.Select(x => x.VideoTitle1).FirstOrDefault();
-            ViewBag.videoTitle2 = db.TblAboutme.Select(x => x.VideoTitle2).FirstOrDefault(); ;
-          //  ViewBag.communicationLocation = db.TblAboutme.Select(x => x.AboutmeLocation).FirstOrDefault(); ;
-            return PartialView();
+            //  ViewBag.videoTitle1 = db.TblAboutme.Select(x => x.VideoTitle1).FirstOrDefault();
+            //  ViewBag.videoTitle2 = db.TblAboutme.Select(x => x.VideoTitle2).FirstOrDefault(); ;
+            ////  ViewBag.communicationLocation = db.TblAboutme.Select(x => x.AboutmeLocation).FirstOrDefault(); ;
+            //  return PartialView();
+
+            var values = db.TblAboutme.ToList();
+            return PartialView(values);
         }
 
 
@@ -85,9 +88,13 @@ namespace Casgem_Portfolio.Controllers
         public PartialViewResult PartialTeacher()
         {
 
-            var values = db.TblService.ToList();
+            var values = db.TblTeacher.ToList();
             return PartialView(values);
         }
+
+
+     
+
 
 
 

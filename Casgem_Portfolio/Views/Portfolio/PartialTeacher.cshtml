@@ -1,12 +1,18 @@
-﻿
+﻿﻿@model  List<Casgem_Portfolio.Models.Entities.TblTeacher>
+
 <section class="w3l-services">
     <div class="blog py-5" id="services">
         <div class="container py-lg-5">
 
-            @*<h3 class="title-big text-center mb-sm-5 mb-4">*@
+            <h3 class="title-big text-center mb-sm-5 mb-4">
                 <h6 class="title-small text-center">EĞİTİMLER</h6>
-                <h3 class="title-big mb-md-5 mb-4">Eğitmen Olduğum Eğitimler </h3>
-            @*</h3>*@
+                <br />
+                <h3 class="title-big text-center mb-sm-5 mb-4">
+                    Eğitmen Olduğum Eğitimler
+                </h3>
+            </h3>
+            <br />
+            <br />
             <div class="row">
                 <div class="col-md-12 mx-auto pr-2">
                     <div class="owl-two owl-carousel owl-theme">
@@ -19,10 +25,10 @@
                                         <div class="icon">
                                             <span class="fa fa-pencil-square-o"></span>
                                         </div>
-                                        <h4 class="number">@item.ServiceID</h4>
-                                        <h4><a href="#url">@item.ServiceTitle</a></h4>
+                                      @*  <h4 class="number">@item.TeacherID </h4>*@
+                                        <h4><a href="#url">@item.TeacherName</a></h4>
                                         <p>
-                                            @item.ServiceContent
+                                            @item.TeacherDescription
                                         </p>
                                         <a href="#read" class="read">Read more</a>
                                     </div>
